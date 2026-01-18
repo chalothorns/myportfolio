@@ -38,7 +38,7 @@ const Home = () => {
               <img
                     src="/img/flower-blue.png"
                     className="w-[120%] h-[120%] max-w-none object-center hover:animate-spin"
-                    style={{ animationDuration: '2s' }}
+                    style={{ animationDuration: '3s' }}
                     alt="smile"
                   />
             </div>
@@ -65,7 +65,7 @@ const Home = () => {
               <img
                     src="/img/flower-orange.png"
                     className="w-[120%] h-[120%] max-w-none object-center hover:animate-spin"
-                    style={{ animationDuration: '2s' }}
+                    style={{ animationDuration: '3s' }}
                     alt="smile"
                   />
             </div>
@@ -74,7 +74,7 @@ const Home = () => {
               <img
                     src="/img/flower-pink.png"
                     className="w-[120%] h-[120%] max-w-none object-center hover:animate-spin"
-                    style={{ animationDuration: '3s' }}
+                    style={{ animationDuration: '4s' }}
                     alt="smile"
                   />
             </div>

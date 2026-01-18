@@ -6,31 +6,55 @@ const MyProjects = () => {
   const projects = [
     {
       title: "Nesta(Property Management)",
-      videoPlaceholder: true,
+      video: "/video/nesta.mp4",
       features: [
         "Management Dashboard",
+        "Tenant Management with Form Submission",
         "Utility Meter Tracking",
-        "Maintenance Request System"
+        "Maintenance Request System",
+        "User Authentication with Token Verification",
+        "Responsive Design for Mobile and Desktop"
       ],
-      tech: "Tech: React, Tailwind CSS, Node.js"
+      description: "My personal project in Bootcamp",
+      tech: "Tech: React, Tailwind CSS, Node.js, Express, MongoDB"
     },
     {
       title: "R Relief (E-commerce Platform)",
-      videoPlaceholder: true,
+      video: "/video/R-rerief.mp4",
       features: [
         "Product Catalog & Details",
         "Shopping Cart & Total Summary",
-        "Checkout & Payment Gateway"
+        "User Registration and Login",
+        "Token-Based Authentication",
+        "Mobile-Friendly Responsive Design"
       ],
-      tech: "Tech: React, Tailwind CSS, Node.js",
+      description: "A team project in Bootcamp.",
+      tech: "Tech: React, Tailwind CSS, Node.js, Express, MongoDB",
       role: "Role: Fullstack Developer"
     },
     {
-      title: "Resource Title Goes Here",
-      videoPlaceholder: true,
-      features: [],
-      description: "Add a brief description about what this resource is about.",
-      tech: ""
+      title: "Fullstack express app",
+      video: "/video/fullstack-app-express.mp4",
+      features: [
+        "User CRUD Operations",
+        "User Authentication with Token Verification",
+        "Backend Middleware Handling with Express",
+        "AI-Powered Chat Interface for Database Queries (RAG)"
+      ],
+      description: "A classroom project focused on understanding backend architecture, middleware, and API design using Express, with a React-based frontend.",
+      tech: "Tech: Node.js, Express, MongoDB, React, Tailwind CSS"
+    },
+    {
+      title: "Dice roller",
+      video: "/video/dice-roller.mp4",
+      features: [
+        "Interactive Dice Roll",
+        "User Goal Selection & Result Validation",
+        "Animated UI with DOM Manipulation",
+        "Roll History Tracking"
+      ],
+      description: "A classroom project focused on understanding DOM Manipulation",      
+      tech: "Tech: HTML, Tailwind CSS, Vanilla JavaScript, SVG"
     }
   ]
 
@@ -146,7 +170,7 @@ const handlePrevious = () => {
 
 
         {/* Project Cards */}
-        <div className="flex items-center gap-8 flex-1 max-w-7xl overflow-hidden relative group py-10 px-4">
+        <div className="flex items-center gap-8 flex-1 max-w-screen-2xl overflow-hidden relative group py-10 px-4">
           <div 
           ref={containerRef}
     className="flex transition-transform duration-700 ease-in-out gap-8"
@@ -161,11 +185,23 @@ const handlePrevious = () => {
               <div className="bg-[#FFFBE0] h-137.5 rounded-md border-4 border-black shadow-xl p-6 flex flex-col transition-all hover:scale-105 duration-300 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:z-20 relative">
               {/* Video Placeholder */}
               <div className="bg-black rounded-lg mb-4 h-55 shrink-0 flex items-center justify-center overflow-hidden">
-                <span className="text-white text-2xl font-bold">Video</span>
+                <div className="relative w-full h-full"> {/* หรือ container ที่คุณคุมขนาดไว้ */}
+              {/* แทนที่จะใช้ span ให้ใช้โครงสร้างนี้แทน */}
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                className="w-full h-full object-cover rounded-md border-2 border-black"
+              >
+              <source src={project.video} type="video/mp4" />
+              Your browser does not support the video tag.
+              </video>
+              </div>
               </div>
 
               {/* Project Title */}
-              <h3 className="text-xl font-bold text-black mb-3">
+              <h3 className="text-xl font-bold text-black mb-3 font-['Lexend_Deca']">
                 {project.title}
               </h3>
               <div className="grow overflow-y-auto pr-2 custom-scrollbar">
@@ -180,11 +216,10 @@ const handlePrevious = () => {
                   ))}
                 </ul>
               )}
-
-              {/* Description */}
               {project.description && (
-                <p className="text-black mb-4">{project.description}</p>
-              )}
+                  <p className="text-black font-['Lexend_Deca'] font-semibold">{project.description}</p>
+                )}
+
               </div>
 
               {/* Tech Stack */}
@@ -199,7 +234,9 @@ const handlePrevious = () => {
             </div>
             </div>
           ))}
+          
         </div>
+        
         </div>
 
         {/* Next Button */}

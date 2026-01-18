@@ -82,20 +82,26 @@ const Experience = () => {
             into Tech
           </h2>
           <p className="text-base leading-relaxed mb-4">
-            This page is a great space to share what's new and what's happening
-            with the students in the class.
+            My turning point into tech began when I was given the opportunity to interview for a Software Tester role that required French language skills. At the time, I believed that language ability alone would be enough, and I underestimated how important technical knowledge truly was.
           </p>
           <p className="text-base leading-relaxed mb-6">
-            Keep updates short and easy to read. You can also ask the students
-            to share their stories or photos.
+            Although I prepared to some extent, my limited technical foundation made it clear that I was not ready. and I didn’t get the role. That experience was disappointing, but it became a powerful wake-up call.
           </p>
-          <div className="bg-[#FFD83F] rounded-lg border-3 border-black overflow-hidden">
+          <p className="text-base leading-relaxed mb-6">
+            Instead of seeing it as a failure, I used it as motivation to seriously invest in developing my technical skills. This led me to discover and commit to an intensive software development bootcamp, where I began building a strong foundation through hands-on projects and continuous learning.
+            </p>
+            <div className="flex justify-center items-center">
+            <div className="w-10 h-10">
             <img
-              src="/api/placeholder/300/200"
+              src="/img/smile-face.png"
               alt="Student with backpack"
-              className="w-full h-48 object-cover"
+              className="w-full object-cover"
             />
           </div>
+          </div>
+          
+
+          
         </div>
 
         {/* Card 2: 500+ Hours of Intensive Coding */}
@@ -112,14 +118,17 @@ const Experience = () => {
             of Intensive Coding
           </h3>
           <p className="text-base leading-relaxed mb-4">
-            This page is a great space to share what's new and what's happening
-            with the students in the class.
+            Completed over 500 hours of hands-on coding through an intensive bootcamp focused on full-stack web development.
+          </p>
+          <p className="text-base leading-relaxed mb-4">
+            I built both individual and team projects using React, Node.js, Express, and MongoDB, gaining experience in authentication, CRUD operations, API integration, and responsive design.
           </p>
           <p className="text-base leading-relaxed">
-            Keep updates short and easy to read. You can also ask the students
-            to share their stories or photos.
+            I built both individual and team projects using React, Node.js, Express, and MongoDB, gaining experience in authentication, CRUD operations, API integration, and responsive design.
           </p>
+          
         </div>
+        
 
         {/* Card 3: Professional Background & Soft Skills */}
         <div className="bg-white rounded-md border-3 border-black shadow-lg p-6 font-['Lexend_Deca']">
@@ -130,19 +139,18 @@ const Experience = () => {
             & Soft Skills
           </h3>
           <p className="text-base leading-relaxed mb-4">
-            This page is a great space to share what's new and what's happening
-            with the students in the class.
+            My professional background spans customer service, education, and international childcare, where clear communication, responsibility, and adaptability were essential.
           </p>
           <p className="text-base leading-relaxed mb-6">
-            Keep updates short and easy to read. You can also ask the students
-            to share their stories or photos.
+            Working with people from different cultures taught me how to listen, ask the right questions, and stay calm when solving problems — skills I now apply directly when working in development teams and handling technical challenges.
           </p>
-          <div className="bg-blue-100 rounded-lg border-2 border-black overflow-hidden">
-            <img
-              src="/api/placeholder/300/200"
-              alt="Students showing artwork"
-              className="w-full h-48 object-cover"
-            />
+          <p className="text-base leading-relaxed">
+            I value feedback, teamwork, and continuous learning, and I’m comfortable adapting to new environments and technologies.
+          </p>
+          <div className="flex justify-center items-center mt-10">
+          <p className="text-2xl leading-relaxed ">
+           💬 🤝 🌍 🔁
+          </p>
           </div>
         </div>
       </div>
