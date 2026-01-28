@@ -108,6 +108,7 @@ const AboutMe = () => {
               <h2 className="text-4xl font-bold text-center mb-6 font-['Lexend_Deca']">Contact Information</h2>
               <div className="flex justify-center gap-6 ">
                 
+                {/* Email icon */}
                 <button
             onClick={handleCopy}
             className="w-14 h-14 flex items-center justify-center cursor-pointer "
@@ -121,12 +122,12 @@ const AboutMe = () => {
                  
                 </button>
 
-                
+                {/* LinkedIn icon */}
                 <a
                   href="https://linkedin.com/in/chalothornloy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-14 h-14 flex items-center justify-center  "
+                  className="w-14 h-14 flex items-center justify-center"
                 >
                   <img
                     src="/img/linkedIn.png"
@@ -135,6 +136,8 @@ const AboutMe = () => {
                   />
                  
                 </a>
+
+                {/* github icon */}
                 <a
                   href="https://github.com/chalothorns"
                   target="_blank"
@@ -144,6 +147,21 @@ const AboutMe = () => {
                   <img
                     src="/img/github.png"
                     className="w-full h-full max-w-none object-center"
+                    alt="linkedIn icon"
+                  />
+                  
+                </a>
+
+                {/* CV icon */}
+                <a
+                  href="https://drive.google.com/file/d/1pWOb3C4U3ex1bsCDxlrUKDiih_1ldsBI/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-16 h-16 flex items-center justify-center"
+                >
+                  <img
+                    src="/img/CV-icon.png"
+                    className="w-full h-full max-w-none object-center -mt-2"
                     alt="linkedIn icon"
                   />
                   

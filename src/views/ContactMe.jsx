@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const ContactMe = () => {
+
+  const apiBase = import.meta.env.VITE_API_URL;
+
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
@@ -10,16 +14,74 @@ const ContactMe = () => {
     message: ""
   });
 
+  const [loading, setLoading] = useState(false);
+  // const [submitSuccess, setSubmitSuccess] = useState("");
+  // const [hasSubmitted, setHasSubmitted] = useState(false);
+  // const [touched, setTouched] = useState({});
+
+  // const currentName = formData.name || "";
+  // const nameParts = formData.name ? formData.name.trim().split(/\s+/).filter(part => part.length > 0) : [];
+  // const hasNumber = /\d/.test(formData.name);
+  // const isEachPartLongEnough = nameParts.every((part) => part.length >= 2);
+
+  // const nameError =
+  //   hasNumber
+  //   ? "Name should not contain numbers."
+  //   : (touched.name && !isEachPartLongEnough && currentName.length > 0)
+  //   ? "Invalid name. Please try again."
+  //   : null;
+
+  //   const emailError =
+  //   formData.email.length !== 0 &&
+  //   !/^[a-zA-Z0-9][a-zA-Z0-9._-]{1,}@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
+  //     formData.email
+  //   )
+  //     ? "Please enter a valid email address"
+  //     : null;
+
+
+  //   const isFormValid = !nameError && !emailError && formData.name.trim() !== "" && formData.email.trim() !== "" && formData.subject.trim() !== "" && formData.message.trim() !== "";
+
+
   const goBack = () => {
     navigate("/");
   };
 
-  const handleSubmit = (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // ใส่ logic ส่งข้อมูลตรงนี้
-  };
+    
+    setLoading(true);
+    try {
+      const url = `${apiBase}/contacts`;
+      const response = await axios.post(url, formData);
 
+      if (
+          response.data.success ||
+          response.status === 200 ||
+          response.status === 201
+        ) {
+          alert(
+            "Thank you! Your message has been sent."
+          );
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        }
+    } catch (error) {
+      const errorMsg =
+        error.response?.data?.message ||
+        error.response?.data?.error ||
+        "Failed. Please try again.";
+        alert(errorMsg);
+        console.error(error);
+        } finally {
+        setLoading(false);
+    }
+  };
+      
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -27,7 +89,11 @@ const ContactMe = () => {
     });
   };
 
+
+
   return (
+    
+      
     <div className="min-h-screen w-full bg-[#FFFBE0] pb-20">
       {/* Back Button */}
       <button
@@ -86,6 +152,7 @@ const ContactMe = () => {
         </button>
       </div>
 
+
       {/* Contact Form */}
       <div className="max-w-2xl mx-auto bg-[#FFFBE0] border-3 border-black rounded-lg shadow-xl py-10 px-16">
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -97,8 +164,9 @@ const ContactMe = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-4 py-3 border-3 border-black rounded-md focus:outline-none focus:ring-2 focus:ring-black transition-colors 
-                ${formData.name ? 'bg-[#FFFBE0]' : 'bg-[#FF9686]'} focus:bg-[#FFFBE0]`}
+              className={`w-full px-4 py-3 border-3 border-black rounded-md focus:outline-none focus:ring-2  transition-colors 
+                ${formData.name ? 'bg-[#FFFBE0]' : 'bg-[#FF9686]'} focus:bg-[#FFFBE0]
+                `}
               required
             />
           </div>
@@ -111,8 +179,9 @@ const ContactMe = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-4 py-3 border-3 border-black rounded-md focus:outline-none focus:ring-2 focus:ring-black transition-colors 
-                ${formData.email ? 'bg-[#FFFBE0]' : 'bg-[#FABD26]'} focus:bg-[#FFFBE0]`}
+              className={`w-full px-4 py-3 border-3 border-black rounded-md focus:outline-none focus:ring-2  transition-colors 
+                ${formData.email ? 'bg-[#FFFBE0]' : 'bg-[#FABD26]'} focus:bg-[#FFFBE0]
+                `}
                 required
             />
           </div>
@@ -150,9 +219,10 @@ const ContactMe = () => {
           <div className="flex justify-center">
             <button
               type="submit"
+              disabled={loading}
               className=" bg-[#FEC900] hover:bg-[#eebd0c] px-12 py-4 rounded-full border-3 border-black shadow-lg font-['Bernoru'] text-2xl transition-all hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 active:translate-y-0 active:translate-x-0 active:shadow-none text-center uppercase tracking-tight scale-x-[0.6]"
             >
-              Leave a Message
+              {loading ? "Leaving a message" : "Leave a Message"}
             </button>
           </div>
         </form>
