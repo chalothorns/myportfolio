@@ -19,7 +19,7 @@ const Home = () => {
                     src="/img/flower-yellow.png"
                     className="w-[120%] h-[120%] max-w-none object-center hover:animate-spin"
                     style={{ animationDuration: '2s' }}
-                    alt="smile"
+                    alt="flower-yellow"
                   />
             </div>
 
@@ -29,7 +29,7 @@ const Home = () => {
                     src="/img/flower-light-yellow.png"
                     className="w-[120%] h-[120%] max-w-none object-center hover:animate-spin"
                     style={{ animationDuration: '2s' }}
-                    alt="smile"
+                    alt="flower-light-yellow"
                   />
 
             </div>
@@ -39,7 +39,7 @@ const Home = () => {
                     src="/img/flower-blue.png"
                     className="w-[120%] h-[120%] max-w-none object-center hover:animate-spin"
                     style={{ animationDuration: '3s' }}
-                    alt="smile"
+                    alt="flower-blue"
                   />
             </div>
 
@@ -48,7 +48,7 @@ const Home = () => {
                     src="/img/flower-green.png"
                     className="w-[120%] h-[120%] max-w-none object-center hover:animate-spin"
                     style={{ animationDuration: '2s' }}
-                    alt="smile"
+                    alt="flower-green"
                   />
             </div>
 
@@ -57,7 +57,7 @@ const Home = () => {
                     src="/img/flower-light-blue.png"
                     className="w-[120%] h-[120%] max-w-none object-center hover:animate-spin"
                     style={{ animationDuration: '3s' }}
-                    alt="smile"
+                    alt="flower-light-blue"
                   />
             </div>
 
@@ -66,7 +66,7 @@ const Home = () => {
                     src="/img/flower-orange.png"
                     className="w-[120%] h-[120%] max-w-none object-center hover:animate-spin"
                     style={{ animationDuration: '3s' }}
-                    alt="smile"
+                    alt="flower-orange"
                   />
             </div>
 
@@ -75,7 +75,7 @@ const Home = () => {
                     src="/img/flower-pink.png"
                     className="w-[120%] h-[120%] max-w-none object-center hover:animate-spin"
                     style={{ animationDuration: '4s' }}
-                    alt="smile"
+                    alt="flower-pink"
                   />
             </div>
 
@@ -149,7 +149,7 @@ const Home = () => {
                   <img
                     src="/img/smile-face.png"
                     className="w-[120%] h-[120%] max-w-none object-center"
-                    alt="smile"
+                    alt="smile-face"
                   />
                 </div>
 
@@ -172,7 +172,7 @@ const Home = () => {
                   <img
                     src="/img/coding-icon.png"
                     className="w-[90%] h-[85%] max-w-none object-center"
-                    alt="smile"
+                    alt="coding-icon"
                   />
                 </div>
 
@@ -192,7 +192,7 @@ const Home = () => {
                   <img
                     src="/img/briefcase.png"
                     className="w-[90%] h-[90%] max-w-none object-center"
-                    alt="smile"
+                    alt="briefcase"
                   />
                 </div>
 
@@ -215,7 +215,7 @@ const Home = () => {
                   <img
                     src="/img/paperplane.png"
                     className="w-[90%] h-[90%] max-w-none object-center"
-                    alt="smile"
+                    alt="paperplane"
                   />
                 </div>
 
