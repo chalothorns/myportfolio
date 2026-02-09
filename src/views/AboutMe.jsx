@@ -154,7 +154,7 @@ const AboutMe = () => {
 
                 {/* CV icon */}
                 <a
-                  href="https://drive.google.com/file/d/1pWOb3C4U3ex1bsCDxlrUKDiih_1ldsBI/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1OT20DpFOKPOPFNIpcTINtPzAps4HjHLl/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-16 h-16 flex items-center justify-center"
